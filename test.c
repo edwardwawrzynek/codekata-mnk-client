@@ -225,6 +225,8 @@ static void copyWithMove(board_t *dst, board_t *src, player_t player, bloc_t x, 
  * Returns 1 and sets x and y if a move was found, 0 otherwise
  * 
  * x and y are clobbered no matter the result
+ * 
+ * While minimax would detect all of these, it may miss forks if it can only run two levels deep, which it has to do on mostly empty large boards.
  */
 static int basicSolve(board_t *b, bloc_t *x, bloc_t *y) {
 	// scratch boards
