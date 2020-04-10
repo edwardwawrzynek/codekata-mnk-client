@@ -216,7 +216,7 @@ int calculateDepth(int openNodes, int maxNodesSearched) {
   return 20;
 }
 
-#define MAX_MINIMAX_SEARCH_NODES 800000
+#define MAX_MINIMAX_SEARCH_NODES 8000000
 
 int main(int argc, char ** argv) {
   if(argc < 3) {
@@ -227,7 +227,7 @@ int main(int argc, char ** argv) {
   memset(&b, 0, sizeof(board_t));
   bloc_t x, y;
 
-  setName("Wawrzynek HeuristicMinimax", argv[1], argv[2]);
+  setName("Wawrzynek Minimax", argv[1], argv[2]);
 
   while(1) {
     if(!loadBoard(&b, argv[1], argv[2])) {
